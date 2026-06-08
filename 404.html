@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — flowboat</title>
+<!-- Fallback redirect to home if JS is disabled -->
+<meta http-equiv="refresh" content="4;url=/">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #1e3542;
+    --cyan: #2ba2c6;
+    --coral: #fb6d47;
+    --white: #ffffff;
+    --font: 'Outfit', -apple-system, system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font);
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .brand {
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  .brand span { color: var(--cyan); }
+  .code {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+    max-width: 420px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  a.home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    background: var(--coral);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  a.home:hover { background: #e85d38; transform: translateY(-2px); }
+</style>
+</head>
+<body>
+  <div class="brand">flow<span>boat</span></div>
+  <div class="code">Error 404</div>
+  <h1>This page drifted off course.</h1>
+  <p>The page you're looking for doesn't exist or has moved. Taking you back to the home page&hellip;</p>
+  <a class="home" href="/">Back to home</a>
+  <script>
+    // Redirect to the home page after a short pause so the message is readable.
+    setTimeout(function () { window.location.replace('/'); }, 2500);
+  </script>
+</body>
+</html>
